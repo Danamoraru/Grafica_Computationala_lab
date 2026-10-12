@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://c1vmbfxe2ow0e"]
+
+[ext_resource type="PackedScene" uid="uid://8dhbaq5flp1i" path="res://character_body_3d.tscn" id="1_a202f"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_uls5s"]
+size = Vector3(30, 1, 20)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_ickbf"]
+
+[node name="Node3D" type="Node3D" unique_id=836088496]
+transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, 0, 0, 0)
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="." unique_id=1034396974]
+transform = Transform3D(9.999965, -0.0018228826, 0.017401695, 0.018214975, 0.99999803, 0.0079834275, -0.017416101, -0.00079519895, 9.999979, 1.3625067, -2.155981, -3.0084605)
+use_collision = true
+mesh = SubResource("BoxMesh_uls5s")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1859287106]
+transform = Transform3D(0.9999999, 0, 0, 0, 0.8660254, 0.49999994, 0, -0.5, 0.86602527, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=283464876]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0252781, -1.9399183)
+mesh = SubResource("CylinderMesh_ickbf")
+
+[node name="CharacterBody3D" parent="." unique_id=471830180 instance=ExtResource("1_a202f")]
+transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 0, 0, 0.9999999, 2.2232935, -0.8706285, -3.2501614)
